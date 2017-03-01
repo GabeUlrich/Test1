@@ -7,4 +7,12 @@ package part2;
  */
 public class Romance extends Book {
 
+    public Romance(String title, String author) {
+        super(title, author);
+    }
+
+    @Override
+    public String getGenre() {
+        return "Romance";
+    }
 }

@@ -6,6 +6,7 @@ package part2;
  * @author Your name here
  */
 public class BookTest {
+
     public static void main(String[] args) {
         Book b1 = new SciFi("Ender's Game", "Orson Scott Card");
         Book b2 = new Horror("Frankenstein", "Mary Shelley");

@@ -15,7 +15,16 @@ public class T1P1 {
         Random gen = new Random();
         int[][] a = new int[20][20];
 
-        // Code to fill array with random ints
-        // Code to print array row by row
+        for (int row = 0; row < a.length; row++) {
+//            System.out.printf("%3d ", row);
+            for (int column = 0; column < a[row].length; column++) {
+                a[row][column] = (int) (Math.random() * 100);
+                System.out.printf("\t" + a[row][column]);
+               
+            }
+        }
+
+        System.out.println();
+
     }
 }
