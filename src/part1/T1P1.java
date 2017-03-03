@@ -12,19 +12,21 @@ import java.util.Random;
 public class T1P1 {
 
     public static void main(String[] args) {
-        Random gen = new Random();
-        int[][] a = new int[20][20];
-
-        for (int row = 0; row < a.length; row++) {
-//            System.out.printf("%3d ", row);
-            for (int column = 0; column < a[row].length; column++) {
-                a[row][column] = (int) (Math.random() * 100);
-                System.out.printf("\t" + a[row][column]);
-               
+        final int rowWidth = 20;
+        final int colHeight = 20;
+        Random rand = new Random();
+        
+        int[][] board = new int[rowWidth][colHeight];
+        for (int row = 0; row < board.length; row++) {
+            for (int col = 0; col < board[row].length; col++) {
+                board[row][col] = rand.nextInt(100);
             }
         }
-
-        System.out.println();
-
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
+                System.out.print(board[i][j] + "\t ");
+            }
+            System.out.println();
+        }
     }
 }
