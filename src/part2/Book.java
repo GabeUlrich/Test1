@@ -8,8 +8,9 @@ package part2;
  * @author Your name here
  */
 public abstract class Book {
-//PARENT CLASS
+//PARENT CL
 
+    
     private String title;
     private String author;
 
@@ -18,6 +19,27 @@ public abstract class Book {
         this.author = author;
     }
 
-    public abstract String getGenre();
+    public String getTitle() {
+        return title;
+    }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{"+ "title= " + title + ", author= " + author + ", Genre= " + getGenre() +'}';
+    }
+
+    public abstract String getGenre();
+        
 }
